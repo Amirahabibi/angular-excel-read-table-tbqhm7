@@ -1,0 +1,14 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+	<table class="sjs-table">
+    <thead>
+    <th *ngFor="let row of data[[28]]">{{row}}</th> 
+    </thead>
+		<tbody *ngFor="let index of tableIndex">
+        <ng-container *ngFor="let row of data[[index]]">
+      <td>
+				{{row}}
+	  	</td>
+        </ng-container>   
+    </tbody>
+	</table>
+	<button (click)="export()">Export!</button>
